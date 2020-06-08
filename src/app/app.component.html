@@ -1,4 +1,14 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Home</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="About Me">info</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list cols="1" rowHeight="2:1">
+  <mat-grid-tile>Random</mat-grid-tile>
+  <mat-grid-tile>History</mat-grid-tile>
+  <mat-grid-tile>Saves</mat-grid-tile>
+  <mat-grid-tile>About</mat-grid-tile>
+</mat-grid-list>
