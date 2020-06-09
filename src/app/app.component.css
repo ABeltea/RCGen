@@ -13,3 +13,14 @@ span {
 mat-grid-tile {
   background: lightblue;
 }
+
+.panel {
+  background-color:azure;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}

@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatGridListModule} from '@angular/material/grid-list';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -9,43 +10,43 @@ import {MatGridListModule} from '@angular/material/grid-list';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Starter Template';
+  selected = new FormControl(0);
+  
+  public tab(event, value) {    
+      this.selected.setValue(value);
+      console.log(value)
+  }
 
-  routes: [{
+  public tabChange($event) {
+    this.selected.setValue($event.index);
+      console.log($event.index)
+  }
+
+  /* public routes: [
+    {
       icon: 'home',
       route: '.',
       title: 'Home',
-    }, {
+    }, 
+    {
       icon: 'library_books',
       route: '.',
-      title: 'Documentation',
-    }, {
+      title: 'Random',
+    }, 
+    {
       icon: 'color_lens',
       route: '.',
-      title: 'Style Guide',
-    }, {
+      title: 'History',
+    }, 
+    {
       icon: 'view_quilt',
       route: '.',
-      title: 'Layouts',
-    }, {
+      title: 'Saves',
+    }, 
+    {
       icon: 'picture_in_picture',
       route: '.',
-      title: 'Components & Addons',
+      title: 'About',
     },
-  ];
-  usermenu: [{
-      icon: 'swap_horiz',
-      route: '.',
-      title: 'Switch account',
-    }, {
-      icon: 'tune',
-      route: '.',
-      title: 'Account settings',
-    }, {
-      icon: 'exit_to_app',
-      route: '.',
-      title: 'Sign out',
-    },
-  ];
-
+  ];*/
 }
