@@ -1,3 +1,39 @@
-<ng-template #rndForm>  
-  This is a partial template  
-</ng-template>
+<div class="container">
+
+  <div class="header">
+    <button mat-flat-button color="primary">Fill entire form with random ideas</button>
+  </div>
+  <form [formGroup]="options" style="margin: 15px;">
+    <div>
+      <mat-radio-group>
+        <mat-radio-button value="f">Female</mat-radio-button>
+        <mat-radio-button value="m">Male</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="e.g. Aeron">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+      <mat-label>Surnames</mat-label>
+      <input matInput placeholder="e.g. Beltea">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+      <mat-label>Age (in years)</mat-label>
+      <input matInput placeholder="e.g. 21">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill"
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="floatLabelControl.value">
+      <mat-select>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-label><mat-icon>favorite</mat-icon> Nationalities</mat-label>
+    </mat-form-field>
+  </form>
+</div>

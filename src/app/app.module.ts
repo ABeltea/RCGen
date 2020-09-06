@@ -39,7 +39,7 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatRadioModule} from '@angular/material/radio';
+import {MatRadioModule, MatRadioButton} from '@angular/material/radio'; 
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSliderModule} from '@angular/material/slider';
@@ -51,7 +51,11 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
+import { MyDynamicDirective } from './directives/my-dynamic.directive';
+import { MyDynamicComponent } from './directives/my-dynamic.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports:      [
     BrowserModule,
@@ -60,6 +64,7 @@ import {MatTreeModule} from '@angular/material/tree';
     RouterModule.forRoot([]),
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     HttpClientModule,
+    ReactiveFormsModule,
     /** Material Modules */
     MatButtonModule,
     MatIconModule,
@@ -75,8 +80,13 @@ import {MatTreeModule} from '@angular/material/tree';
     MatListModule,
     MatTabsModule,
     MatToolbarModule,
+    MatRadioModule, 
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule
     ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, MyDynamicComponent, MyDynamicDirective ],
+  bootstrap:    [ AppComponent ],
+  entryComponents: [ MyDynamicComponent ]
 })
 export class AppModule { }

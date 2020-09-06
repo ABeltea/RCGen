@@ -3,16 +3,16 @@
     <mat-toolbar-row>
       <span>Random Character Generator</span>
       <span class="example-spacer"></span>
-      <button mat-mini-fab aria-label="About" color="primary" (click)="tab($event, 2)">
+      <!--<button mat-mini-fab aria-label="About" color="primary" (click)="tab($event, 2)">
         <mat-icon>info</mat-icon>
-      </button>
+      </button>-->
     </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-tab-group mat-align-tabs="center" [selectedIndex]="selected.value" (selectedTabChange)="tabChange($event)">
     <mat-tab label="Random">
       <!-- Random Form -->  
-      Random
+      <div myDynamicDirective></div>
     </mat-tab>
     <mat-tab label="History">
       <!-- Card/list item -->

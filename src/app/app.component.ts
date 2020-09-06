@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {FormControl} from '@angular/forms';
+import { Directive, ComponentFactoryResolver, ViewContainerRef, Renderer2, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-app',
